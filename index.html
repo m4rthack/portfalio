@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Diego Canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>DIEGO <span class="name">CANVAS</span></h1>
+    </header>
+
+    <section id="about" class="about">
+        <h2>Sobre Mí</h2>
+        <div class="about-content">
+            <img src="foto_del_tatuador.jpg" alt="Foto del Tatuador" class="profile-img">
+            <div class="about-text">
+                <p>Hola, soy Diego Canvas, un apasionado tatuador con más de 10 años de experiencia en el arte del tatuaje. Me especializo en estilos como Realismo, Fine line, Neo-Tradicional y Lettrering. Mi objetivo es crear diseños únicos que cuenten historias personales y expresen la individualidad de cada cliente.</p>
+                <p>Trabajo en Tatto Time Studio un estudio en Bilbao, donde ofrezco un ambiente seguro y profesional. Cada tatuaje es una obra de arte personalizada, y me enorgullezco de la calidad y el detalle en mi trabajo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Galería de Trabajos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="tatto_1.jpg" alt="Tatuaje 1">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_2.jpg" alt="Tatuaje 2">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_3.jpg" alt="Tatuaje 3">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_4.jpg" alt="Tatuaje 4">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_5.jpg" alt="Tatuaje 5">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_6.jpg" alt="Tatuaje 6">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_7.jpg" alt="Tatuaje 7">
+            </div>
+            <div class="gallery-item">
+                <img src="tatto_8.jpg" alt="Tatuaje 8">
+            </div>
+        </div>
+        
+    </section>
+    <section id="cat" class="cat">
+        <h2>Contáctame Ahora</h2>
+        <p class="cta-phrase">Tu próximo tatuaje empieza con un mensaje. ¿Hablamos?</p>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/stylishcanvas.ink/" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://wa.me/34614701374" target="_blank" class="social-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+</section>
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="full-img">
+    </div>
+    <footer id="contact">
+        <p class="credit">Diseñado y creado por Aitoorma</p>
+        <p>&copy; 2025 Diego Canvas. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const modal = document.getElementById("image-modal");
+        const fullImg = document.getElementById("full-img");
+        const galleryImages = document.querySelectorAll(".gallery-item img");
+
+        // Abrir imagen al hacer clic
+        galleryImages.forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "flex";
+                fullImg.src = this.src; // Copia la ruta de la imagen pequeña a la grande
+            }
+        });
+
+        // Cerrar al hacer clic en la X o en el fondo oscuro (mejor para móviles)
+        modal.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
