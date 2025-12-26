@@ -375,4 +375,381 @@ footer p {
 @keyframes zoom {
     from { transform: scale(0.7); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}/* Estilos para el portfolio del tatuador */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    font-family: Montserrat; /* Forzamos aquí también */
+    font-weight: 700; /* Para que se vea negrita y potente */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+header .name {
+    color: #FCD617;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.about {
+    padding: 2rem;
+    background-color: #ecf0f1;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.1);
+}
+
+.about h2 {
+    color: #FCD617;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(44, 62, 80, 0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.gallery {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: #FCD617;
+}
+
+/* --- ESTILO PINTEREST (MASONRY) --- */
+.gallery-grid {
+    display: block;           /* Cambiamos de grid a columnas */
+    column-count: 3;          /* 3 columnas en ordenadores */
+    column-gap: 15px;         /* Espacio entre columnas */
+    width: 100%;
+}
+
+.gallery-item {
+    display: inline-block;    /* Necesario para que no se rompan las fotos */
+    width: 100%;              /* Ocupa el ancho de su columna */
+    margin-bottom: 15px;      /* Espacio abajo de cada foto */
+    break-inside: avoid;      /* Evita que la foto se parta entre dos columnas */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;              /* La foto se adapta al ancho de la columna */
+    height: auto;             /* Mantiene su forma original (sin recortes) */
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);   /* Un zoom muy suave al pasar el ratón */
+}
+
+
+.cat {
+    padding: 2rem;            /* Igual que .gallery */
+    max-width: 1200px;        /* Igual que .gallery */
+    margin: 0 auto;           /* Igual que .gallery */
+}
+
+.cat h2 {
+    text-align: center;       /* Igual que .gallery h2 */
+    color: #FCD617;           /* Mismo color amarillo de tus títulos */
+    margin-bottom: 2rem;      /* Espacio para separar de los botones */
+}
+
+.cta-phrase {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555; /* Un gris suave para no quitarle fuerza al título */
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic; /* Le da un toque artístico */
+}
+.contact-container {
+    background-color: #f8f9fa; /* Fondo suave para resaltar */
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container p {
+    font-size: 1.1rem;
+    color: #2d3142;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste de botones para que se vean más profesionales */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px; /* Menos redondeado = más profesional */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Colores de marca */
+.instagram { background-color: #7209B7; } /* Integrado con la paleta creativa */
+.whatsapp { background-color: #25D366; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 1rem;
+    }
+    .contact-container {
+        padding: 1.5rem;
+    }
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.credit {
+    font-size: 0.8rem;
+    color: #cccccc;
+    margin: 0.5rem 0;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.social-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.instagram {
+    background-color: #E4405F;
+}
+
+.instagram:hover {
+    background-color: #d6336c;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.social-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.instagram {
+    background-color: #E4405F;
+}
+
+.instagram:hover {
+    background-color: #d6336c;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* --- ESTILOS PARA MÓVIL (SÓLO SE ACTIVAN EN PANTALLAS PEQUEÑAS) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Centramos todo el contenedor de Sobre Mí */
+    .about {
+        padding: 2rem 1rem !important;
+        text-align: center !important;
+        margin: 1rem auto !important;
+    }
+
+    /* 2. Forzamos que la foto y el texto se apilen en vertical */
+    .about-content {
+        display: flex !important;
+        flex-direction: column !important; /* Foto arriba, texto abajo */
+        align-items: center !important;
+        gap: 1.5rem !important;
+    }
+
+    /* 3. Centramos la foto y ajustamos tamaño */
+    .profile-img {
+        margin: 0 auto !important;
+        width: 160px !important;
+        height: 160px !important;
+    }
+
+    /* 4. Centramos los párrafos y quitamos márgenes extra */
+    .about-text {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .about-text p {
+        text-align: center !important;
+        padding: 0 10px;
+    }
+
+   .gallery-grid {
+        column-count: 2;      /* En móviles ponemos 2 columnas (para que no se vean minúsculas) */
+        column-gap: 10px;
+    }
+    
+    .gallery-item {
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Tamaño optimizado para que quepa en una línea en el móvil */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-grid {
+        column-count: 2;      /* Incluso en móviles pequeños, 2 columnas suele quedar bien */
+    }
+}
+
+/* 1. Fondo del Modal */
+.modal {
+    display: none;          /* Se mantiene oculto hasta que el JS lo activa */
+    position: fixed;        /* Se queda fijo en la pantalla aunque hagas scroll */
+    z-index: 10000;         /* Valor muy alto para que nada lo tape */
+    left: 0;
+    top: 0;
+    width: 100%;            /* Ocupa todo el ancho */
+    height: 100%;           /* Ocupa todo el alto */
+    background-color: rgba(0, 0, 0, 0.9); /* Negro casi opaco */
+    
+    /* Centrado perfecto de la imagen */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. La imagen dentro del modal */
+.modal-content {
+    max-width: 90%;         /* No toca los bordes laterales */
+    max-height: 85%;        /* No toca los bordes superior/inferior */
+    border: 2px solid #FCD617; /* Marco amarillo de tu marca */
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255, 102, 0, 0.3);
+    
+    /* Animación de entrada suave */
+    animation: zoom 0.3s ease;
+}
+
+/* 3. Botón de cerrar (X) */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #FCD617; /* Cambia a amarillo al pasar el ratón */
+}
+
+/* Animación de Zoom */
+@keyframes zoom {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
