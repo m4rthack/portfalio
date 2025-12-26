@@ -25,7 +25,7 @@ header h1 {
 }
 
 header .name {
-    color: #ff6600;
+    color: #FCD617;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 .about {
@@ -38,7 +38,7 @@ header .name {
 }
 
 .about h2 {
-    color: #ff6600;
+    color: #FCD617;
 }
 
 .about-content {
@@ -67,7 +67,7 @@ header .name {
 
 .gallery h2 {
     text-align: center;
-    color: #ff6600;
+    color: #FCD617;
 }
 
 /* --- ESTILO PINTEREST (MASONRY) --- */
@@ -109,7 +109,7 @@ header .name {
 
 .cat h2 {
     text-align: center;       /* Igual que .gallery h2 */
-    color: #ff6600;           /* Mismo color naranja de tus títulos */
+    color: #FCD617;           /* Mismo color amarillo de tus títulos */
     margin-bottom: 2rem;      /* Espacio para separar de los botones */
 }
 
@@ -347,7 +347,7 @@ footer p {
 .modal-content {
     max-width: 90%;         /* No toca los bordes laterales */
     max-height: 85%;        /* No toca los bordes superior/inferior */
-    border: 2px solid #ff6600; /* Marco naranja de tu marca */
+    border: 2px solid #FCD617; /* Marco amarillo de tu marca */
     border-radius: 8px;
     box-shadow: 0 0 30px rgba(255, 102, 0, 0.3);
     
@@ -368,7 +368,7 @@ footer p {
 }
 
 .close-modal:hover {
-    color: #ff6600; /* Cambia a naranja al pasar el ratón */
+    color: #FCD617; /* Cambia a amarillo al pasar el ratón */
 }
 
 /* Animación de Zoom */
